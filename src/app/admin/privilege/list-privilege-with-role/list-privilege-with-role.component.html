@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+  <style>
+    body {
+      overflow-y: hidden;
+      
+    }
+
+    /* Style pour la gestion des privilèges par rôle */
+    .privileges-management {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .privileges-management .card-title {
+      font-family: serif;
+      font-size: 20px;
+    }
+
+    .privileges-management .table-responsive {
+      margin-top: 20px;
+    }
+
+    .privileges-management .main-search-input-wrap {
+      margin-bottom: 20px;
+    }
+
+    .privileges-management .main-search-input-item input {
+      width: 100%;
+    }
+
+    .privileges-management table {
+      width: 100%;
+    }
+
+    .privileges-management th,
+    .privileges-management td {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .privileges-management .btn-danger {
+      color: white;
+    }
+
+    /* Style pour le menu */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #222;
+      padding-top: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 10px;
+      color: #fff;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #444;
+    }
+
+    .sidebar ul li.active {
+      background-color: #00881d;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu -->
+<app-menu></app-menu>
+
+<br><br>
+  <div class="privileges-management" style="margin-left: 280px;">
+    <div style="font-size: 16px; font-family: serif">
+      <div class="card-body">
+        <h5 class="card-title">Liste des Privilèges par Rôle</h5>
+        <br>
+        <div class="table-responsive">
+          <div class="main-search-input-wrap">
+            <div class="main-search-input fl-wrap">
+              <div class="main-search-input-item">
+                <input type="text" value="" placeholder="Recherche Privilèges..." [(ngModel)]="searchtext">
+              </div>
+            </div>
+          </div>
+          <table id="zero_config" class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Code Role</th>
+                <th>Code Menu</th>
+                <th>Libellé Menu</th>
+                <th>Code Module</th>
+                <th>Libellé Module</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let p of privileges | paginate: { itemsPerPage: itemsPerPage, currentPage: p } | filter:searchtext">
+              <tr>
+                <td>{{p?.id}}</td>
+                <td>{{p?.role.cdRole}}</td>
+                <td>{{p?.menuId}}</td>
+                <td>{{p?.menu.lbMenu}}</td>
+                <td>{{p?.menu.module.cdModul}}</td>
+                <td>{{p?.menu.module.lbModul}}</td>
+                <td><button class="button delete-button" (click)="deletePrivilege(p?.id)"><img style="height: 23px;width: 23px;" src="../assets/images/delete.png" alt="Delete"></button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-center">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom: 290px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+</div>
+</body>
+</html>

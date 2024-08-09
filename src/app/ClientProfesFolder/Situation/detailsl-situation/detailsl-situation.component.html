@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+<body>
+  <app-menu-client-profes></app-menu-client-profes>
+  <br /><br /><br />
+  <div class="row justify-content-center" style="font-size: 16px; font-family: serif; margin-left: 230px;">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Détails de la situation du Client</h4>
+          <div class="table-responsive">
+            <table id="zero_config" class="table table-striped table-bordered">
+              <tbody>
+                <tr>
+                  <th>Matricule:</th>
+                  <td>{{situation?.id}}</td>
+                </tr>
+                <tr>
+                  <th>Numero du Compte Principal:</th>
+                  <td>{{situation?.numeroComptePrincipal}}</td>
+                </tr>
+                <tr>
+                  <th>Nombre de clients:</th>
+                  <td>{{situation?.nombreClients}}</td>
+                </tr>
+                <tr>
+                  <th>Mnt en Consolidation:</th>
+                  <td>{{situation?.mntEnConsolidation}}</td>
+                </tr>
+                <tr>
+                  <th>Tranche Effectif:</th>
+                  <td>{{situation?.trancheEffectif}}</td>
+                </tr>
+                <tr>
+                  <th>Consolidation Interne:</th>
+                  <td>{{situation?.consolidationInterne}}</td>
+                </tr>
+                <tr>
+                  <th>Date de Rating Legacy:</th>
+                  <td>{{situation?.dateRatingLegacy}}</td>
+                </tr>
+                <tr>
+                  <th>Score de Client Legacy:</th>
+                  <td>{{situation?.scoreClientLegacy}}</td>
+                </tr>
+                <tr>
+                  <th>Montant Impayes:</th>
+                  <td>{{situation?.montantImpayes}}</td>
+                </tr>
+                <tr>
+                  <th>En Cours CT:</th>
+                  <td>{{situation?.encoursCT}}</td>
+                </tr>
+                <tr>
+                  <th>En cours MT:</th>
+                  <td>{{situation?.encoursMT}}</td>
+                </tr>
+                <tr>
+                  <th>En Cours Credit Tresorerie:</th>
+                  <td>{{situation?.encoursCreditTresorerie}}</td>
+                </tr>
+                <tr>
+                  <th>Date de situation:</th>
+                  <td>{{situation?.dateDeSituation}}</td>
+                </tr>
+                <tr>
+                  <th>Ratio Engagement CDR:</th>
+                  <td>{{situation?.ratioEngagementCDR}}</td>
+                </tr>
+                <tr>
+                    <th>Consolidation Autres Banques:</th>
+                    <td>{{situation?.consolidationAutresBanques}}</td>
+                  </tr>
+                <tr>
+                  <th>Besoin Accompagnement:</th>
+                  <td>{{situation?.besoinAccompagnement}}</td>
+                </tr>
+                <tr>
+                  <th>Besoin Financement:</th>
+                  <td>{{situation?.besoinFinancement}}</td>
+                </tr>
+                <tr>
+                  <th>Etat du Resultat:</th>
+                  <td>{{situation?.etatDuResultat}}</td>
+                </tr>
+                <tr>
+                  <th>Classe Banque Centrale:</th>
+                  <td>{{situation?.classeBanqueCentrale}}</td>
+                </tr>
+                <tr>
+                  <th>Année Classification Centrale:</th>
+                  <td>{{situation?.anneeClassificationCentrale}}</td>
+                </tr>
+                <tr>
+                  <th>Rating Actuelle Legacy:</th>
+                  <td>{{situation?.ratingActuelleLegacy}}</td>
+                </tr>
+                <tr>
+                  <th>Classe Risque Legacy:</th>
+                  <td>{{situation?.classeRisqueLegacy}}</td>
+                </tr>
+                <tr>
+                  <th>Score Client Legacy:</th>
+                  <td>{{situation?.scoreClientLegacy}}</td>
+                </tr>
+                <tr>
+                    <th>Date Rating Legacy:</th>
+                    <td>{{situation?.dateRatingLegacy}}</td>
+                </tr>
+                <tr>
+                    <th>Impaye:</th>
+                    <td>{{situation?.impaye}}</td>
+                </tr>
+                <tr>
+                    <th>Montant Impayes:</th>
+                    <td>{{situation?.montantImpayes}}</td>
+                </tr> <tr>
+                    <th>Ratio Impayes Engagements:</th>
+                    <td>{{situation?.ratioImpayesEngagements}}</td>
+                </tr> <tr>
+                    <th>Anciennete Impayes:</th>
+                    <td>{{situation?.ancienneteImpayes}}</td>
+                </tr> <tr>
+                    <th>Taille Besoin Futur:</th>
+                    <td>{{situation?.tailleBesoinFutur}}</td>
+                </tr> <tr>
+                    <th>Mouvements Totaux AnneeN:</th>
+                    <td>{{situation?.mouvementsTotauxAnneeN}}</td>
+                </tr> <tr>
+                    <th>Mouvements Totaux AnneeN1:</th>
+                    <td>{{situation?.mouvementsTotauxAnneeN1}}</td>
+                </tr> <tr>
+                    <th>Mouvement Creditieur AnneeN:</th>
+                    <td>{{situation?.mouvementCreditieurAnneeN}}</td>
+                </tr> <tr>
+                    <th>Mouvement Creditieur AnneeN1:</th>
+                    <td>{{situation?.mouvementCreditieurAnneeN1}}</td>
+                </tr> <tr>
+                    <th>Mouvement Debiteur AnneeN:</th>
+                    <td>{{situation?.mouvementDebiteurAnneeN}}</td>
+                </tr> <tr>
+                    <th>Mouvement Debiteur AnneeN1:</th>
+                    <td>{{situation?.mouvementDebiteurAnneeN1}}</td>
+                </tr> <tr>
+                    <th>Ratio Credit Solde Moyen:</th>
+                    <td>{{situation?.ratioCreditSoldeMoyen}}</td>
+                </tr> <tr>
+                    <th>Regularite Echeances:</th>
+                    <td>{{situation?.regulariteEcheances}}</td>
+                </tr> <tr>
+                    <th>Dérnier Salaire YTD:</th>
+                    <td>{{situation?.dernierSalaireYTD}}</td>
+                </tr> <tr>
+                    <th>Solde Moyen Annuel AnneeN:</th>
+                    <td>{{situation?.soldeMoyenAnnuelAnneeN}}</td>
+                </tr> <tr>
+                    <th>Solde Moyen Annuel AnneeN1:</th>
+                    <td>{{situation?.soldeMoyenAnnuelAnneeN1}}</td>
+                </tr> <tr>
+                    <th>Total Creances GLE:</th>
+                    <td>{{situation?.totalCreancesGLE}}</td>
+                </tr> <tr>
+                    <th>Variation Annuelle Mouvement Credit N:</th>
+                    <td>{{situation?.variationAnnuelleMvtCreditN}}</td>
+                </tr> <tr>
+                    <th>Variation Annuelle Mouvement Credit N1:</th>
+                    <td>{{situation?.variationAnnuelleMvtCreditN1}}</td>
+                </tr> <tr>
+                    <th>Variation Mouvement Credit:</th>
+                    <td>{{situation?.variationMvtCredit}}</td>
+                </tr> <tr>
+                    <th>Ration Solde Moyen FC:</th>
+                    <td>{{situation?.rationSoldeMoyenFC}}</td>
+                </tr>
+                <tr>
+                    <th>Iar Central Risques CDR:</th>
+                    <td>{{situation?.iarCentralRisquesCDR}}</td>
+                </tr><tr>
+                    <th>Variation Engagement CDR:</th>
+                    <td>{{situation?.variationEngagementCDR}}</td>
+                </tr><tr>
+                    <th>Montant Credit Tresorerie CDR:</th>
+                    <td>{{situation?.mntCreditTresorerieCDR}}</td>
+                </tr><tr>
+                    <th>Variation Credit Treso CDR:</th>
+                    <td>{{situation?.variationCreditTresoCDR}}</td>
+                </tr><tr>
+                    <th>Incident:</th>
+                    <td>{{situation?.incident}}</td>
+                </tr><tr>
+                    <th>Modele Applicable:</th>
+                    <td>{{situation?.modeleApplicable}}</td>
+                </tr><tr>
+                    <th>Autres Information:</th>
+                    <td>{{situation?.autresInformation}}</td>
+                </tr><tr>
+                    <th>Commentaire:</th>
+                    <td>{{situation?.commentaire}}</td>
+                </tr><tr>
+                    <th>Variable Libre 1:</th>
+                    <td>{{situation?.variableLibre1}}</td>
+                </tr><tr>
+                    <th>Variable Libre 2:</th>
+                    <td>{{situation?.variableLibre2}}</td>
+                </tr><tr>
+                    <th>Variable Libre 3:</th>
+                    <td>{{situation?.variableLibre3}}</td>
+                </tr><tr>
+                    <th>Variable Libre 4:</th>
+                    <td>{{situation?.variableLibre4}}</td>
+                </tr><tr>
+                    <th>Variable Libre 5:</th>
+                    <td>{{situation?.variableLibre5}}</td>
+                </tr><tr>
+                    <th>Variable Libre 6:</th>
+                    <td>{{situation?.variableLibre6}}</td>
+                </tr><tr>
+                    <th>Variable Libre 7:</th>
+                    <td>{{situation?.variableLibre7}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div style="margin-bottom: 250px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+</div>
+</body>
+</html>

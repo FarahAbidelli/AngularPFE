@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon.png"
+    />
+  </head>
+
+  <body >
+
+    <div class="preloader" >
+      <div class="lds-ripple" >
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+      </div>
+    </div>
+
+    <div
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin5"
+      data-sidebartype="full"
+      data-sidebar-position="absolute"
+      data-header-position="absolute"
+      data-boxed-layout="full"
+    >
+    <aside class="left-sidebar" data-sidebarbg="skin5" style="height: 900px;background-color: #0F265B">
+
+      <div class="scroll-sidebar" >
+
+        <nav class="sidebar-nav" >
+          <ul id="sidebarnav" class="pt-4" style="background-color: #0F265B">
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link waves-effect waves-dark sidebar-link"
+                routerLink="/admin/dashboard"
+                aria-expanded="false" style="text-decoration: none;font-family: serif;"
+                ><img style="height: 23px;width: 23px;" src="../assets/images/settings.png" alt="Icon">
+                <span class="hide-menu">Menu Général</span>
+                </a
+              >
+            </li>
+
+
+           <!--- <li class="sidebar-item" *ngFor="let m of menus">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" (click)="m.expanded = !m.expanded" [attr.aria-expanded]="m.expanded ? 'true' : 'false'" style="text-decoration: none;font-family: serif;">
+                  <i class="mdi mdi-face"></i>
+                  <span class="hide-menu">{{m?.cdModul}}</span>
+                  <span class="ml-auto" *ngIf="m.expanded"></span>
+                  <span class="ml-auto" *ngIf="!m.expanded"></span>
+              </a>
+              <ul *ngIf="m.expanded">
+                  <li class="sidebar-item" *ngFor="let mod of m.menuDtos">
+                      <a [routerLink]="mod.routerLink" class="sidebar-link" style="margin-left: 25px;text-decoration: none;font-family: serif;">{{mod.libmenu}}</a>
+                  </li>
+              </ul>
+          </li>-->
+
+          </ul>
+        </nav>
+
+      </div>
+    </aside>
+      <div class="page-wrapper">
+
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Axely Modules</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Modules
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid" style="width: 100%;">
+
+          <div class="row el-element-overlay">
+
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-3">
+              <div class="card">
+                <div class="el-card-item">
+                  <div class="el-card-avatar el-overlay-1">
+                    <img src="../assets/images/big/retail.png" alt="user" />
+                    <div class="el-overlay">
+                      <ul class="list-style-none el-info">
+                        <li class="el-item">
+                          <a
+                            class="
+                              btn
+                              default
+                              btn-outline
+                              image-popup-vertical-fit
+                              el-link
+                            "
+                            href="../assets/images/big/retail.png"
+                            ><i class="mdi mdi-magnify-plus"></i
+                          ></a>
+                        </li>
+                        <li class="el-item">
+                          <a class="btn default btn-outline el-link" [routerLink]="['/admin/ClientProfesFolder/module-client-profes']">
+
+                          <i class="mdi mdi-link"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="el-card-content">
+                    <h4 class="mb-0">Module Profes</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-3">
+              <div class="card">
+                <div class="el-card-item">
+                  <div class="el-card-avatar el-overlay-1">
+                    <img src="../assets/images/big/img4.jpg" alt="user" />
+                    <div class="el-overlay">
+                      <ul class="list-style-none el-info">
+                        <li class="el-item">
+                          <a
+                            class="
+                              btn
+                              default
+                              btn-outline
+                              image-popup-vertical-fit
+                              el-link
+                            "
+                            href="../assets/images/big/img4.jpg"
+                            ><i class="mdi mdi-magnify-plus"></i
+                          ></a>
+                        </li>
+                        <li class="el-item">
+                          <a class="btn default btn-outline el-link" [routerLink]="['/admin/habilitation-et-role']">
+
+                          <i class="mdi mdi-link"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="el-card-content">
+                    <h4 class="mb-0">Module Habilitaions et Rôle</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-3">
+              <div class="card">
+                <div class="el-card-item">
+                  <div class="el-card-avatar el-overlay-1">
+                    <img src="../assets/images/big/img3.jpg" alt="user" />
+                    <div class="el-overlay">
+                      <ul class="list-style-none el-info">
+                        <li class="el-item">
+                          <a
+                            class="
+                              btn
+                              default
+                              btn-outline
+                              image-popup-vertical-fit
+                              el-link
+                            "
+                            href="../assets/images/big/img3.jpg"
+                            ><i class="mdi mdi-magnify-plus"></i
+                          ></a>
+                        </li>
+                        <li class="el-item">
+                          <a class="btn default btn-outline el-link" [routerLink]="['/admin/models']"><i class="mdi mdi-link"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="el-card-content">
+                    <h4 class="mb-0">Gestion des Modules</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-3">
+              <div class="card">
+                <div class="el-card-item">
+                  <div class="el-card-avatar el-overlay-1">
+                    <img src="../assets/images/big/img5.jpg" alt="user" />
+                    <div class="el-overlay">
+                      <ul class="list-style-none el-info">
+                        <li class="el-item">
+                          <a
+                            class="
+                              btn
+                              default
+                              btn-outline
+                              image-popup-vertical-fit
+                              el-link
+                            "
+                            href="../assets/images/big/img5.jpg"
+                            ><i class="mdi mdi-magnify-plus"></i
+                          ></a>
+                        </li>
+                        <li class="el-item">
+                          <a
+                            class="btn default btn-outline el-link"
+                            href="javascript:void(0);"
+                            ><i class="mdi mdi-link"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="el-card-content">
+                    <h4 class="mb-0">Project title</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="page-wrapper">
+        <app-footer></app-footer>
+    </div>
+    </div>
+
+
+
+  </body>
+</html>

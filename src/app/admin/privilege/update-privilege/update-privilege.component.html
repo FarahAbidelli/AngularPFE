@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+<body>
+  <app-menu></app-menu>
+  <br /><br /><br />
+  <div class="row justify-content-center" style="font-size: 16px; font-family: serif; margin-left: 230px;">
+    <div class="col-md-6">
+      <div class="card">
+        <form (ngSubmit)="updatePrivilege()" id="update-privilege-form" class="form-horizontal">
+          <div class="card-body">
+            <h4 class="card-title" style="font-family: serif; font-size: 20px;">Mettre à jour un Privilège</h4>
+            <div class="form-group">
+              <label for="roleId">Sélectionner un rôle :</label>
+              <select class="form-control" [(ngModel)]="roleId" name="roleId" required>
+                <option *ngFor="let p of roles" [value]="p.id">{{ p.cdRole }}</option>
+              </select>            
+            </div>
+            <div class="form-group">
+              <label for="menuId">Sélectionner un menu :</label>
+              <select class="form-control" [(ngModel)]="menuId" name="menuId" required>
+                <option *ngFor="let m of menus" [value]="m.cdMenu">{{ m.lbMenu }}</option>
+              </select>            
+            </div>
+            <div class="card-body text-center">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Modifier</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div style="margin-bottom: 290px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+</div>
+</body>
+</html>

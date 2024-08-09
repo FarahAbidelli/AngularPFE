@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+
+    /* Style pour la partie utilisateur */
+    .user-management {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      margin-right: 40px;
+    }
+
+    /* Style pour l'entrée de recherche principale */
+    .main-search-input-wrap {
+      margin-bottom: 20px;
+    }
+
+    .main-search-input-item input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .update-module-form {
+      font-size: 16px;
+      font-family: serif;
+    }
+
+    .update-module-form .card-title {
+      font-family: serif;
+      font-size: 20px;
+    }
+
+    .update-module-form .col-form-label {
+      text-align: end;
+    }
+
+    .update-module-form .btn-primary {
+      background-color: #00881D;
+      border-color: #00881D;
+    }
+  </style>
+</head>
+
+<body>
+  <app-menu></app-menu>
+  
+<br><br>
+  <div class="row justify-content-center update-module-form">
+    <div class="col-md-6">
+      <div class="card">
+        <form class="form-horizontal">
+          <div class="card-body">
+            <h4 class="card-title">Mise à jour module</h4>
+            <div class="form-group row">
+              <label for="fname" class="col-sm-3 col-form-label">Code module</label>
+              <div class="col-sm-9">
+                <input type="text" [(ngModel)]="module.cdModul" [ngModelOptions]="{standalone: true}" disabled class="form-control" placeholder="Libellé role" id="lbRole" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lname" class="col-sm-3 col-form-label">Libellé module</label>
+              <div class="col-sm-9">
+                <input type="text" [(ngModel)]="module.lbModul" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Code role" id="cdRole" />
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <button type="submit" (click)="updateModule()" class="btn btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div  style="margin-bottom: 320px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+</div>
+</body>
+</html>

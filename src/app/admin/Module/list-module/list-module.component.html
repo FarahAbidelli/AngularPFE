@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+
+    /* Ajout de marge supérieure au menu pour créer de l'espace */
+    app-menu {
+      margin-top: 60px; /* Ajustez cette valeur en fonction de la hauteur de votre menu */
+    }
+  </style>
+</head>
+<body>
+  <app-menu></app-menu>
+  <br><br>
+  <div class="user-management" style="
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-right:40px;
+
+  ">
+    <div style="font-size: 16px;font-family: serif">
+      <div class="card-body">
+        <h5 class="card-title" style="font-family: serif;font-size: 20px;">Liste des modules</h5>
+        <br>
+        <button class="btn btn-primary btn-sm" style="font-family: serif;font-size: 15px;margin-left: 1040px;" routerLink="/admin/add-module">Ajouter Module</button>
+        <div class="table-responsive">
+          <div class="main-search-input-wrap">
+            <div class="main-search-input fl-wrap">
+              <div class="main-search-input-item">
+                <input type="text"  value="" placeholder="Rechercher module..." [(ngModel)]="searchtext">
+              </div>                                
+            </div>                      
+          </div>
+          <table id="zero_config" class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>code Module</th>
+                <th>Libellé Module</th>
+                <th>Action</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let m of modules | paginate: { itemsPerPage: itemsPerPage, currentPage: p } | filter:searchtext">
+              <tr>
+                <td>{{m?.cdModul}}</td>
+                <td>{{m?.lbModul}}</td>
+                <td style="text-align: center; vertical-align: middle;"><button class="btn btn-success btn-sm" style="color: white;" [routerLink]="['/admin/update-module', m.cdModul]">Update</button></td>
+                <td style="text-align: center; vertical-align: middle;"><button class="btn btn-danger btn-sm" (click)="deleteModule(m.cdModul)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-center">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div  style="margin-bottom: 150px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+</div>
+</body>
+</html>

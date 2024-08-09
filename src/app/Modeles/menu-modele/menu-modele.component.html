@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Modèles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar-link {
+            text-decoration: none;
+            font-family: serif;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar-link img {
+            height: 23px;
+            width: 23px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <aside class="left-sidebar" data-sidebarbg="skin5" style="height: 900px;background-color: #0F265B;">
+        <div class="scroll-sidebar">
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav" class="pt-4" style="background-color: #0F265B;">
+                    <li class="sidebar-item" style="background-color: #0F265B;">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/admin/dashboard" aria-expanded="false" style="text-decoration: none;font-family: serif;">
+                            <img style="height: 23px;width: 23px;" src="../assets/images/settings.png" alt="Icon"><span class="hide-menu">Menu Général</span>
+                        </a>
+                    </li>
+                
+                    <li class="sidebar-item" style="background-color: #0F265B;">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#situationClientSubMenu" role="button" aria-expanded="false" aria-controls="situationClientSubMenu">
+                            <img style="height: 23px;width: 23px;" src="../assets/images/gerer modele.png" alt="Icon">
+                            <span class="hide-menu">Gestion des Modèles</span>
+                        </a>
+                        <ul class="sidebar-submenu collapse" id="situationClientSubMenu">
+                            <li class="sidebar-item" style="background-color: #0F265B;">
+                                <a [routerLink]="['/admin/Modele/add-modele']" class="sidebar-link" style="text-decoration: none;font-family: serif;"><img style="height: 23px;width: 23px;" src="../assets/images/add.png" alt="Icon">
+                                    Ajouter Modèle</a>
+                            </li>
+                            <li class="sidebar-item" style="background-color: #0F265B;">
+                                <a [routerLink]="['/admin/Modele/list-modele']" class="sidebar-link" style="text-decoration: none;font-family: serif;"><img style="height: 23px;width: 23px;" src="../assets/images/verified.png" alt="Icon">Liste des Modèles</a>
+                            </li>
+                            <li class="sidebar-item" style="background-color: #0F265B;">
+                                <a [routerLink]="['/admin/Modele/corbeille-modele']" class="sidebar-link" style="text-decoration: none;font-family: serif;"><img style="height: 23px;width: 23px;" src="../assets/images/bin.png" alt="Icon">Corbeille</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

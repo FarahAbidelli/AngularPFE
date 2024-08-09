@@ -1,0 +1,19 @@
+.button img {
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle;
+    border: none;
+    background: none; 
+}
+.button {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    background: none; 
+}
+body {
+    overflow: hidden; 
+}

@@ -1,0 +1,6 @@
+export enum Type {
+  NUMBER = 'NUMBER',
+  INTERVALE = 'INTERVALE',
+  DATE = 'DATE',
+  ENUMERATION = 'ENUMERATION'
+}

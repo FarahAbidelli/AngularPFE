@@ -1,0 +1,12 @@
+
+.sidebar-link {
+  text-decoration: none;
+  font-family: serif;
+  display: flex;
+  align-items: center;
+}
+.sidebar-link img {
+  height: 23px;
+  width: 23px;
+  margin-right: 10px;
+}

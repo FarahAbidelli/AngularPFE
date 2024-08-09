@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+
+    /* Style pour la partie d'ajout de module */
+    .add-module-form {
+      font-size: 16px;
+      font-family: serif;
+    }
+
+    .add-module-form .card-title {
+      font-family: serif;
+      font-size: 20px;
+    }
+
+    .add-module-form .col-form-label {
+      text-align: end;
+    }
+
+    .add-module-form .btn-primary {
+      background-color: #00881D;
+      border-color: #00881D;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu -->
+  <app-menu></app-menu>
+<br><br>
+  <!-- Formulaire d'ajout de module -->
+  <div class="row justify-content-center add-module-form">
+    <div class="col-md-6">
+      <div class="card">
+        <form class="form-horizontal">
+          <div class="card-body">
+            <h4 class="card-title">Ajouter module</h4>
+            <div class="form-group row">
+              <label id="name-label" for="username" class="col-md-4 col-form-label">Code Module</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="module.cdModul" [ngModelOptions]="{standalone: true}" id="username" placeholder="Entrer code module" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label id="name-label" for="fullname" class="col-md-4 col-form-label">Libellé Module</label>
+              <div class="col-md-8">
+                <input type="text" [(ngModel)]="module.lbModul" [ngModelOptions]="{standalone: true}" id="fullname" placeholder="Entrer Libellé module" class="form-control" required>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <button type="submit" (click)="create()" class="btn btn-primary btn-block">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div  style="margin-bottom: 290px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+</div>
+</body>
+</html>

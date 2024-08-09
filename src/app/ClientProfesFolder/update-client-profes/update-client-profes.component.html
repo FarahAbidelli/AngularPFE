@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+<body>
+   <br /><br /><br />
+      <div class="row justify-content-center" style="font-size: 16px; font-family: serif; margin-left:200px;">
+        <div class="col-md-6">
+          <div class="card">
+            <form class="form-horizontal">
+              <div class="card-body">
+                <h4 class="card-title" style="font-family: serif; font-size: 20px;">Mise à jour client</h4><br>
+                <div class="form-group row">
+                    <div class="form-group row">
+                        <label for="id" class="col-sm-3 col-form-label">Matricule</label>
+                        <div class="col-sm-9">
+                          <input type="text" style="margin-left: 8px;width: 446px;" disabled [(ngModel)]="client.id" [ngModelOptions]="{standalone: true}" id="id" class="form-control" required>
+                        </div>
+                      </div>
+                  <label for="codeRelation" class="col-sm-3 col-form-label">Code Relation</label>
+                  <div class="col-sm-9">
+                    <input type="text" disabled [(ngModel)]="client.codeRelation" [ngModelOptions]="{standalone: true}" id="codeRelation" class="form-control" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="codeRelationFlexcube" class="col-sm-3 col-form-label">Code Relation Flexcube</label>
+                    <div class="col-sm-9">
+                      <input type="text" disabled [(ngModel)]="client.codeRelationFlexcube" [ngModelOptions]="{standalone: true}" id="codeRelationFlexcube" class="form-control" required>
+                    </div>
+                  </div>
+                <div class="form-group row">
+                  <label for="idNat" class="col-sm-3 col-form-label">Code Nationalité</label>
+                  <div class="col-sm-9">
+                    <input type="text" disabled [(ngModel)]="client.idNat" [ngModelOptions]="{standalone: true}" id="idNat" placeholder="Enter la nationalite" class="form-control" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nom" class="col-sm-3 col-form-label">Nom</label>
+                    <div class="col-sm-9">
+                      <input type="text" disabled [(ngModel)]="client.nom" [ngModelOptions]="{standalone: true}" id="nom" placeholder="Enter le nom" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="profession" class="col-sm-3 col-form-label">Profession</label>
+                    <div class="col-sm-9">
+                      <input type="text"  [(ngModel)]="client.profession" [ngModelOptions]="{standalone: true}" id="profession" placeholder="Enter Profession" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nationalite" class="col-sm-3 col-form-label">Nationalité</label>
+                    <div class="col-sm-9">
+                      <input type="text"  [(ngModel)]="client.dateRNE" [ngModelOptions]="{standalone: true}" id="nationalite" placeholder="Enter Nationalité" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ville" class="col-sm-3 col-form-label">Ville</label>
+                    <div class="col-sm-9">
+                      <input type="text"  [(ngModel)]="client.ville" [ngModelOptions]="{standalone: true}" id="ville" placeholder="Enter ville" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="region" class="col-sm-3 col-form-label">Région</label>
+                    <div class="col-sm-9">
+                      <input type="text"  [(ngModel)]="client.region" [ngModelOptions]="{standalone: true}" id="region" placeholder="Enter Région" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dateNaissance" class="col-sm-3 col-form-label">Date de Naissance</label>
+                    <div class="col-sm-9">
+                      <input type="date"  [(ngModel)]="client.dateNaissance" [ngModelOptions]="{standalone: true}" id="dateNaissance" placeholder="Enter date Naissance" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dateDebutRelation" class="col-sm-3 col-form-label">Date de Début Relation</label>
+                    <div class="col-sm-9">
+                      <input type="date"  [(ngModel)]="client.dateDebutRelation" [ngModelOptions]="{standalone: true}" id="dateDebutRelation" placeholder="Enter date Début Relation" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="situationFamiliale" class="col-sm-3 col-form-label">Situation Familiale</label>
+                    <div class="col-sm-9">
+                      <input type="text" [(ngModel)]="client.secteurActivite" [ngModelOptions]="{standalone: true}" id="situationFamiliale" placeholder="Enter la situation Familiale" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="salaireDomicile" class="col-sm-3 col-form-label">Salaire Domicile</label>
+                    <div class="col-sm-9">
+                      <input type="text" [(ngModel)]="client.chiffreAffaire" [ngModelOptions]="{standalone: true}" id="salaireDomicile" placeholder="Enter Salaire Domicile" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dateEmbauche" class="col-sm-3 col-form-label">Date d'embauche</label>
+                    <div class="col-sm-9">
+                      <input type="date" [(ngModel)]="client.perimetreActivite" [ngModelOptions]="{standalone: true}" id="dateEmbauche" placeholder="Enter Date d'embauche" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="newProfessionCode" class="col-sm-3 col-form-label">New Profession Code</label>
+                    <div class="col-sm-9">
+                      <input type="text" [(ngModel)]="client.gouvernorat" [ngModelOptions]="{standalone: true}" id="newProfessionCode" placeholder="Enter New Profession Code" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="newModelUBCI" class="col-sm-3 col-form-label">New Model UBCI</label>
+                    <div class="col-sm-9">
+                      <input type="text" [(ngModel)]="client.segment" [ngModelOptions]="{standalone: true}" id="newModelUBCI" placeholder="Enter New Model UBCI" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="autre" class="col-sm-3 col-form-label">Autre</label>
+                    <div class="col-sm-9">
+                      <input type="text" [(ngModel)]="client.autre" [ngModelOptions]="{standalone: true}" id="autre" placeholder="Enter Autre" class="form-control" required>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <button type="submit" (click)="updateClient()" class="btn btn-success">
+                  Valider
+                </button><br>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  <br>
+  <div style="margin-bottom: 290px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+</div>
+</body>
+</html>
