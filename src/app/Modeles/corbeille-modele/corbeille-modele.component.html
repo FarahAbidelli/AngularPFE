@@ -32,7 +32,7 @@
       justify-content: center;
       margin-top: 50px;
   }
-  
+
   .input {
       display: flex;
       align-items: center;
@@ -43,11 +43,11 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       padding: 10px 20px;
   }
-  
+
   .input-item {
       flex: 1;
   }
-  
+
   .input-item input {
       width: 100%;
       border: none;
@@ -56,11 +56,11 @@
       font-size: 16px;
       border-radius: 50px;
   }
-  
+
   .input-item input::placeholder {
       color: #999;
   }
-  
+
   .btn1 {
       background-color: #4285F4;
       border: none;
@@ -71,11 +71,11 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
   }
-  
+
   .btn1:hover {
       background-color: #357ae8;
   }
-  
+
   /* Style pour les messages */
   .message-container {
       display: flex;
@@ -83,7 +83,7 @@
       align-items: center;
       margin-top: 20px;
   }
-  
+
   .message-box {
       background-color: #f8f9fa;
       border: 1px solid #ddd;
@@ -94,13 +94,13 @@
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
   .message-box .fs-title {
       font-size: 18px;
       color: #333;
       margin: 0;
   }
-  
+
   .fs-title {
       font-size: 18px;
       color: #333;
@@ -122,7 +122,7 @@
                     <div class="input fl-wrap">
                         <div class="input-item">
                             <input type="text" value=""  placeholder="Rechercher modele..."  >
-                        </div>  
+                        </div>
                         <button type="submit"  class="btn1 btn1-primary">Rechercher</button>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                   <div class="table-responsive">
                     <div class="main-search-input-wrap">
                       <div class="main-search-input fl-wrap">
-                    </div>                      
+                    </div>
                   </div>
                     <table
                       id="zero_config"
@@ -147,6 +147,9 @@
                           <th>Date de mise à jour suivante</th>
                           <th>Modèle utilisé</th>
                           <th>dernière date d'utilisation</th>
+                          <th>Valeur CA Min</th>
+                          <th>Valeur CA Max</th>
+                          <th>Données Financières </th>
                           <th>désactivé</th>
                           <th>Action</th>
                         </tr>
@@ -162,6 +165,9 @@
                           <td>{{c?.nextUpdateDate}}</td>
                           <td>{{c?.used}}</td>
                           <td>{{c?.lastUsedDate}}</td>
+                          <td>{{c?.minCaValue}}</td>
+                          <td>{{c?.maxCaValue}}</td>
+                          <td>{{c?.withFinancialData}}</td>
                           <td>{{c?.disabled}}</td>
                           <td style="text-align: center; vertical-align: middle;"><button class="button restore-button" (click)="restoreModele(c.id)"><img style="height: 23px;width: 23px;" src="../assets/images/recycle-bin.png"></button></td>
                         </tr>
@@ -173,7 +179,7 @@
                   </div>
                   </div>
           </div>
-       
+
     </div>
     <div  style="margin-bottom: 220px;"></div>
     <div class="page-wrapper">

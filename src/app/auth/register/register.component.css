@@ -38,7 +38,7 @@
       display: flex;
   }
   .align-center {
-    align-items: center; 
+    align-items: center;
   }
   .center-center {
     align-items: center;
@@ -61,9 +61,9 @@
       justify-content: center;
       margin: 0 -2%;
       transform: rotate(-12deg) skew(-12deg);
-  } 
- 
- 
+  }
+
+
   .padding-top--64 {
     padding-top: 64px;
   }
@@ -82,13 +82,13 @@
   .padding-bottom--15 {
     padding-bottom: 15px;
   }
-  
-  
+
+
   .flex-justifyContent--center {
     -ms-flex-pack: center;
     justify-content: center;
   }
-  
+
   .formbg {
       margin: 0px auto;
       width: 100%;
@@ -120,7 +120,7 @@
       grid-template-columns: 50% 50%;
       align-items: center;
   }
-  
+
   .field input {
       font-size: 16px;
       line-height: 28px;
@@ -131,23 +131,23 @@
       border-radius: 4px;
       outline-color: rgb(84 105 212 / 0.5);
       background-color: rgb(255, 255, 255);
-      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+                  rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px;
   }
-  
+
   input[type="submit"] {
       background-color: rgb(84, 105, 212);
-      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
-                  rgb(84, 105, 212) 0px 0px 0px 1px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
-                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+                  rgba(0, 0, 0, 0.12) 0px 1px 1px 0px,
+                  rgb(84, 105, 212) 0px 0px 0px 1px,
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px,
                   rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
       color: #fff;
       font-weight: 600;
@@ -156,7 +156,7 @@
   .field-checkbox input {
       width: 20px;
       height: 15px;
-      margin-right: 5px; 
+      margin-right: 5px;
       box-shadow: unset;
       min-height: unset;
   }
@@ -179,7 +179,7 @@
       font-weight: 600;
       margin: 0 10px;
   }
-  
+
   .animationRightLeft {
     animation: animationRightLeft 2s ease-in-out infinite;
   }
@@ -192,7 +192,7 @@
   .tans4s {
     animation: animationLeftRight 4s ease-in-out infinite;
   }
-  
+
   @keyframes animationLeftRight {
     0% {
       transform: translateX(0px);
@@ -203,8 +203,8 @@
     100% {
       transform: translateX(0px);
     }
-  } 
-  
+  }
+
   @keyframes animationRightLeft {
     0% {
       transform: translateX(0px);
@@ -215,4 +215,5 @@
     100% {
       transform: translateX(0px);
     }
-  } 
+  }
+

@@ -17,11 +17,12 @@ export class ModeleService {
   addModele(modele:any){
       return this.http.post<Modele>(`${this.BasicUrl}/addModele`,modele);
     }
-       
+
   public getModeleById(id: number): Observable<Modele> {
     const url = `${this.BasicUrl}/getModeleById/${id}`;
     return this.http.get<Modele>(url);
   }
+
   restoreModele(id: number): Observable<any> {
     const url = `${this.BasicUrl}/restoreModele/${id}`;
     return this.http.put(url, null);
@@ -35,4 +36,10 @@ export class ModeleService {
 public getSoftDeleteModels(){
   return this.http.get<Modele[]>(`${this.BasicUrl}/ModelsSoftDeleted`);
 }
+ModeleUsed(id: number): Observable<Modele> {
+  return this.http.put<Modele>(`${this.BasicUrl}/${id}/ModeleUsed`, null);
+}
+SearchByNameAndAnnee(name:any,annee:any){
+  return this.http.get<Modele[]>(`${this.BasicUrl}/searchByNameAndAnnee?name=${name}&annee=${annee}`);
+ }
 }

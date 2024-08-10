@@ -36,25 +36,40 @@
           <div class="card">
             <form class="form-horizontal">
               <div class="card-body">
-                <h4 class="card-title" style="font-family: serif; font-size: 20px;">Mise à jour Modèle</h4><br>
+                <h4 class="card-title" style="font-family: serif; font-size: 20px; font-size: 25px; text-align: center;">Mise à jour Modèle</h4><br>
+               <br>
+
                 <div class="form-group row">
-                    <label for="id" class="col-sm-3 col-form-label">ID</label>
+                    <label for="id" class="col-sm-3 text-end control-label col-form-label">ID</label>
                     <div class="col-sm-9">
-                      <input type="text" style="width: 446px;" disabled [(ngModel)]="modele.id" [ngModelOptions]="{standalone: true}" id="id" class="form-control" required>
+                      <input type="text"  disabled [(ngModel)]="modele.id" [ngModelOptions]="{standalone: true}" id="id" class="form-control" required>
                     </div>
                   </div>
                 <div class="form-group row">
-                  <label for="codeRelation" class="col-sm-3 col-form-label">Nom</label>
+                  <label for="codeRelation" class="col-sm-3 text-end control-label col-form-label">Nom</label>
                   <div class="col-sm-9">
                     <input type="text"  [(ngModel)]="modele.nom" [ngModelOptions]="{standalone: true}" id="codeRelation" class="form-control" required>
                   </div>
                 </div>
                 <div class="form-group row">
-                    <label for="codeRelationFlexcube" class="col-sm-3 col-form-label">Description</label>
+                    <label for="codeRelationFlexcube" class="col-sm-3 text-end control-label col-form-label">Description</label>
                     <div class="col-sm-9">
                       <input type="text"  [(ngModel)]="modele.description" [ngModelOptions]="{standalone: true}" id="codeRelationFlexcube" class="form-control" required>
                     </div>
                   </div>
+                  <div class="form-group row">
+                    <label for="minCaValue" class="col-sm-3 text-end control-label col-form-label">CA Min</label>
+                    <div class="col-sm-9">
+                    <input type="number" [(ngModel)]="modele.minCaValue" required [ngModelOptions]="{standalone: true}" class="form-control" placeholder="minCaValue Modele" id="minCaValue" >
+                  </div>
+                </div>
+
+                  <div class="form-group row">
+                    <label for="maxCaValue" class="col-sm-3 text-end control-label col-form-label">CA Max</label>
+                    <div class="col-sm-9">
+                    <input type="number" [(ngModel)]="modele.maxCaValue" required [ngModelOptions]="{standalone: true}" class="form-control" placeholder="maxCaValue Modele"  id="maxCaValue">
+                  </div>
+                </div>
                 <div class="card-body text-center">
                   <button type="submit" (click)="updateModele()" class="btn btn-success">
                     Valider

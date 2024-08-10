@@ -12,6 +12,9 @@ import Swal from 'sweetalert2';
 })
 export class ListModeleComponent implements OnInit {
   modele: Modele[] = [];
+  name: string = '';
+  id?:number;
+  annee?: number;
   p: number = 1;
   itemsPerPage: number = 10;
   totalUsers: any;
@@ -40,6 +43,9 @@ export class ListModeleComponent implements OnInit {
     });
   }
 
+
+
+
   deleteModele(id: any): void {
     Swal.fire({
       title: 'Êtes-vous sûr?',
@@ -55,9 +61,9 @@ export class ListModeleComponent implements OnInit {
         this.service.deleteModele(id).subscribe({
           next: (res) => {
             Swal.fire('Supprimé!', 'Le modele a été supprimé.', 'success');
-            this.removeModeleFromList(id); 
-            //this.router.navigate(['/admin/Modele/corbeille-modele']); 
-        
+            this.removeModeleFromList(id);
+            //this.router.navigate(['/admin/Modele/corbeille-modele']);
+
           },
           error: (error) => {
             console.error('Erreur lors de la suppression de Modèle :', error);
@@ -82,4 +88,50 @@ export class ListModeleComponent implements OnInit {
     this.router.navigate(['/admin/Modele/update-modele',id]);
   }
 
+
+  toggleUsed(modele: Modele): void {
+    if (!modele || modele.id === undefined) {
+        console.error('Modèle invalide:', modele);
+        return;
+    }
+
+    this.service.ModeleUsed(modele.id).subscribe({
+        next: (updatedModele: Modele) => {
+            const index = this.modele.findIndex(m => m.id === updatedModele.id);
+            if (index !== -1) {
+                this.modele[index] = updatedModele;
+                console.log('Modèle mis à jour:', updatedModele);
+            } else {
+                console.error('Modèle non trouvé dans la liste:', updatedModele);
+            }
+        },
+        error: (error) => {
+            console.error('Erreur lors de la mise à jour du modèle:', error);
+        }
+    });
+}
+
+SearchByNameAndAnnee(event?: Event): void {
+  if (event) {
+    event.preventDefault();
+  }
+
+this.service.SearchByNameAndAnnee(this.name,this.annee).subscribe({
+  next: (data) => {
+    this.exists = true;
+    this.modele = data;
+    this.notExists = this.modele.length === 0;
+    if (this.notExists) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Aucun modèle trouvé',
+        text: 'Veuillez essayer un autre Nom de Modèle.'
+      });
+    }
+  },
+  error: (error) => {
+    console.log(error);
+  }
+});
+}
 }
