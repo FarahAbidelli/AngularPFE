@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inspired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+</head>
+
+<body>
+  <app-menu-modele></app-menu-modele>
+  <br>
+  <div class="user-management" style="
+    max-width:1000px; /* Réduire la largeur maximale */
+    margin: 0 auto;
+    padding: 15px; /* Réduire le padding */
+    border-radius: 5px;
+  ">
+    <!-- Button to add variable for the current model -->
+    <button class="button delete-button" (click)="addVariable(modele!.id)" style="margin-left: 850px; margin-bottom: 10px;"> <!-- Ajustement de la position -->
+      <img style="height: 25px;width: 25px;" src="../assets/images/bouton-ajout.png" alt="Add Variable"> <!-- Réduire la taille de l'icône -->
+    </button>
+
+    <div style="font-size: 14px;font-family: serif"> <!-- Réduire la taille de la police -->
+      <div class="card-body">
+        <div class="input-wrap">
+          <div class="input fl-wrap">
+            <div class="input-item">
+              <input type="text" value="" placeholder="Rechercher avec Nom" style="font-size: 14px;"> <!-- Taille de police réduite -->
+            </div>
+            <div class="input-button">
+              <button type="submit" class="btn1 btn1-primary" style="padding: 5px 10px; font-size: 14px;">Rechercher</button> <!-- Réduire le padding et la police -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="table-responsive">
+          <table id="zero_config" class="table table-striped table-bordered" style="font-size: 14px;"> <!-- Taille de police réduite -->
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Coefficient</th>
+                <th>Type</th>
+                <th colspan="2">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let v of (modele?.variables ?? []) | paginate: { itemsPerPage: itemsPerPage, currentPage: p } | filter: searchtext">
+                <td>{{ v.id }}</td>
+                <td>{{ v.code }}</td>
+                <td>{{ v.description }}</td>
+                <td>{{ v.coefficient }}</td>
+                <td>{{ v.type }}</td>
+                <td>
+                  <button class="button edit-button" (click)="openUpdateVariableForm()">
+                    <img style="height: 23px; width: 23px;" src="../assets/images/rotation.png" alt="update">
+                  </button>
+                </td>
+          <!--      <tbody>
+                <tr>
+                  <td>{{ variable.code }}</td>
+                  <td>{{ variable.description }}</td>
+                  <td>{{ variable.coefficient }}</td>
+                  <td>{{ variable.type }}</td>
+                  <td>
+                    <button class="button edit-button" (click)="openUpdateVariableForm()">
+                      <img style="height: 23px; width: 23px;" src="../assets/images/rotation.png" alt="update">
+                    </button>
+                  </td>
+                <td style="text-align: center; vertical-align: middle;">
+                  <button class="button edit-button" style="color: white; padding: 5px; font-size: 14px;" [routerLink]="['/admin/Variable/ConsulterScoresVariable', v.id]">
+                    <img style="height: 20px;width: 30px;" src="../assets/images/see.png" alt="update">
+                    <!-- Réduire la taille de l'icône
+                  </button>
+                </td>-->
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <div *ngIf="ponderationValue !== undefined">
+            <h3 style="font-size: 14px;font-family: serif">Valeur de la Pondération : {{ ponderationValue }}</h3>
+          </div>
+          <div class="text-center">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom: 100px;"></div> <!-- Réduire la marge -->
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+  </div>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="keywords"
+    content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+  />
+  <meta
+    name="description"
+    content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inspired from Bootstrap Framework"
+  />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../assets/images/favicon.png"
+  />
+</head>
+
+<body>
+  <app-menu-modele></app-menu-modele>
+  <br>
+  <div class="user-management" style="
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+  ">
+
+
+
+
+
+
+
+    <!-- Button to add variable for the current model -->
+
+
+
+
+
+
+    <!--<button class="button delete-button" (click)="addVariable(modele!.id)" style="margin-left: 1100px;">
+      <img style="height: 30px;width: 30px;" src="../assets/images/bouton-ajout.png" alt="Add Variable">
+    </button>
+
+    <div style="font-size: 16px;font-family: serif">
+      <div class="card-body">
+        <div class="input-wrap">
+          <div class="input fl-wrap">
+            <div class="input-item">
+              <input type="text" value="" placeholder="Rechercher avec Nom">
+            </div>
+            <div class="input-button">
+              <button type="submit" class="btn1 btn1-primary">Rechercher</button>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="table-responsive">
+          <table id="zero_config" class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Coefficient</th>
+                <th>Type</th>
+                <th colspan="2">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let v of (modele?.variables ?? []) | paginate: { itemsPerPage: itemsPerPage, currentPage: p } | filter: searchtext">
+                <td>{{ v.id }}</td>
+                <td>{{ v.code }}</td>
+                <td>{{ v.description }}</td>
+                <td>{{ v.coefficient }}</td>
+                <td>{{ v.type }}</td>
+                <td style="text-align: center; vertical-align: middle;">
+                  <button class="button edit-button" style="color: white;" [routerLink]="['/admin/Variable/ConsulterScoresVariable', v.id]">
+                    <img style="height: 23px;width: 23px;" src="../assets/images/see.png" alt="update">
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <div *ngIf="ponderationValue !== undefined">
+            <h3 style="font-size: 16px;font-family: serif">Valeur de la Pondération : {{ ponderationValue }}</h3>
+          </div>
+          <div class="text-center">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom: 220px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+  </div>
+</body>
+</html>
+-->

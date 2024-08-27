@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template" />
+  <meta name="description" content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <app-menu-modele></app-menu-modele>
+  <br>
+  <div class="user-management" style="max-width: 1200px; margin: 0 auto; padding: 20px; border-radius: 5px; margin-right: 20px;">
+    <div style="font-size: 16px;font-family: serif">
+      <div class="card-body">
+        <br>
+        <div *ngIf="variable">
+          <!--<h3 style="font-size: 16px;font-family: serif">Détails de la Question N° : {{ variable.id }}</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Coefficient</th>
+                <th>Type</th>
+                <th colspan="2">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ variable.code }}</td>
+                <td>{{ variable.description }}</td>
+                <td>{{ variable.coefficient }}</td>
+                <td>{{ variable.type }}</td>
+                <td>
+                  <button class="button edit-button" (click)="openUpdateVariableForm()">
+                    <img style="height: 23px; width: 23px;" src="../assets/images/rotation.png" alt="update">
+                  </button>
+                </td>
+                <td style="text-align: center; vertical-align: middle;">
+                  <button class="button delete-button" (click)="openAddScoreForm()">
+                    <img style="height: 23px;width: 23px;" src="../assets/images/plus.png" alt="Add">
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>-->
+          <h3 style="font-size: 16px;font-family: serif">Liste des Choix</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Score</th>
+                <th>Valeur</th>
+                <th>Type</th>
+                <th colspan="2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let score of variable.scores">
+                <td>{{ score.score }}</td>
+                <td>
+                  <ng-container *ngIf="score.type === 'ENUMERATION'">
+                    <span>{{ score.valeur }}</span>
+                  </ng-container>
+                  <ng-container *ngIf="score.type === 'INTERVALE'">
+                    <span>Min: {{ score.vmin !== undefined ? score.vmin : 'N/A' }}, Max: {{ score.vmax !== undefined ? score.vmax : 'N/A' }}</span>
+                  </ng-container>
+                  <ng-container *ngIf="score.type === 'DATE'">
+                    <span>{{ score.valeur | date }}</span>
+                  </ng-container>
+                  <ng-container *ngIf="score.type === 'NUMBER'">
+                    <span>{{ score.valeur }}</span>
+                  </ng-container>
+                  <ng-container *ngIf="!score.type">
+                    <span>{{ score.valeur }}</span>
+                  </ng-container>
+                </td>
+                <td>{{ score.type }}</td>
+                <td>
+                  <button class="button edit-button" (click)="openUpdateForm(score.id)">
+                    <img src="../assets/images/rotation.png" alt="update">
+                  </button>
+                </td>
+                <td>
+                  <button class="button delete-button" (click)="deleteScore(score.id)">
+                    <img src="../assets/images/delete.png" alt="Delete">
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <!-- Affichage de la valeur calculée de la pondération -->
+          <!--<div *ngIf="ponderationValue !== undefined">
+            <h3 style="font-size: 16px;font-family: serif">Valeur de la Pondération : {{ ponderationValue }}</h3>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom: 220px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+  </div>
+</body>
+
+</html>
+

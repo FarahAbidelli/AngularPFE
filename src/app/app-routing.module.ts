@@ -38,6 +38,17 @@ import { DetailslSituationComponent } from './ClientProfesFolder/Situation/detai
 import {UploadSituationlCsvComponent} from './ClientProfesFolder/Situation/upload-situationl-csv/upload-situationl-csv.component'
 import {ListlSituationComponent} from './ClientProfesFolder/Situation/listl-situation/listl-situation.component'
 import { UploadCsvClientComponent } from './ClientProfesFolder/upload-csv-client/upload-csv-client.component';
+import { AddVariableComponent } from './Modeles/Variable/add-variable/add-variable.component';
+import { ConsulterScoresVariableComponent } from './Modeles/Variable/consulter-scores-variable/consulter-scores-variable.component';
+import { ListVariableComponent } from './Modeles/Variable/list-variable/list-variable.component';
+import { VariablesModeleComponent } from './Modeles/Variable/variables-modele/variables-modele.component';
+import { AddScoreComponent } from './Modeles/Score/add-score/add-score.component';
+import { AjoutVariableComponent } from './Modeles/Variable/ajout-variable/ajout-variable.component';
+import { NoterClientComponent } from './ClientProfesFolder/Notation/noter-client/noter-client.component';
+import { NoterClientFormComponent } from './ClientProfesFolder/Notation/noter-client-form/noter-client-form.component';
+import { ConsulterNotationComponent } from './ClientProfesFolder/Notation/consulter-notation/consulter-notation.component';
+import { ModifierNotationComponent } from './ClientProfesFolder/Notation/modifier-notation/modifier-notation.component';
+import { UpdateNotationComponent } from './ClientProfesFolder/Notation/update-notation/update-notation.component';
 
 const routes: Routes = [
   {
@@ -67,10 +78,15 @@ const routes: Routes = [
       { path: 'roles', component: RolesComponent},
       { path: 'habilitation-et-role', component: HabilitationEtRoleComponent},
       { path: 'models',component: GestionModeleComponent},
+
+
       { path: 'Modele/add-modele',component: AddModeleComponent},
       { path: 'Modele/list-modele',component: ListModeleComponent},
       { path: 'Modele/corbeille-modele',component: CorbeilleModeleComponent},
       { path: 'Modele/update-modele/:id',component: UpdateModeleComponent},
+
+
+
       { path: 'ClientProfesFolder/details-client/:id',component: DetailsClientComponent},
       { path: 'ClientProfesFolder/list-client',component: ListcComponent},
       { path: 'ClientProfesFolder/listc',component: ListcComponent},
@@ -81,6 +97,19 @@ const routes: Routes = [
       { path: 'ClientProfesFolder/Situation/upload-situation-csv', component: UploadSituationlCsvComponent},
       { path: 'ClientProfesFolder/upload-csv-client', component: UploadCsvClientComponent},
 
+      { path: 'Score/add-score/:variableId', component: AddScoreComponent},
+      { path: 'Variable/add-variable/:modeleId', component: AddVariableComponent},
+      { path: 'Variable/ConsulterScoresVariable/:id', component: ConsulterScoresVariableComponent},
+      { path: 'Variable/list-variable', component: ListVariableComponent},
+      { path: 'Variable/add-variable', component: AddVariableComponent},
+      { path: 'Modele/variables/:id', component:VariablesModeleComponent},
+      { path: 'Variable/ajout-variable', component: AjoutVariableComponent},
+      { path: 'ClientProfesFolder/Notation/noter-client', component: NoterClientComponent },
+      { path: 'ClientProfesFolder/Notation/noter-client', component: NoterClientComponent },
+      { path: 'ClientProfesFolder/Notation/noter-client-form', component: NoterClientFormComponent },
+      { path: 'ClientProfesFolder/Notation/consulter-notation', component: ConsulterNotationComponent },
+      { path: 'ClientProfesFolder/Notation/modifier-notation', component: ModifierNotationComponent },
+      { path: 'updateNotation/:id',component: UpdateNotationComponent}
 
     ]
   },

@@ -29,7 +29,7 @@
     <app-menu-modele></app-menu-modele>
     <br>
     <div class="user-management" style="
-    max-width:1200px;
+    max-width:1100px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 5px;
@@ -38,17 +38,23 @@
               <div style="font-size: 16px;font-family: serif">
                   <div class="card-body">
                     <div class="input-wrap">
-                      <div class="input fl-wrap">
-                        <div class="input-item">
-                            <input type="text" value="" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="Rechercher avec Nom">
-                        </div>
-                        <div class="input-item">
-                            <input type="text" value="" [(ngModel)]="annee" [ngModelOptions]="{standalone: true}" placeholder="Et Année">
-                        </div>
-                        <div class="input-button">
-                            <button type="submit" (click)="SearchByNameAndAnnee($event)"  class="btn1 btn1-primary">Rechercher</button>
-                        </div>
-                    </div>
+
+                    <div class="input fl-wrap" style="display: flex; align-items: center; gap: 10px;">
+                      <div class="input-item" style="flex: 1;">
+                          <input type="text" value="" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="Rechercher avec Nom" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                      </div>
+                      <div class="input-item" style="flex: 1;">
+                          <input type="text" value="" [(ngModel)]="annee" [ngModelOptions]="{standalone: true}" placeholder="Et Année" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                      </div>
+                      <div class="input-button" style="flex-shrink: 0;">
+                          <button type="submit" (click)="SearchByNameAndAnnee($event)" class="btn1 btn1-primary" style="padding: 8px 16px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+                              Rechercher
+                          </button>
+                      </div>
+                  </div>
+<br>
+
+
                   </div>
               <br>
               <div class="table-responsive">
@@ -58,7 +64,7 @@
                       <th>ID</th>
                       <th>Nom</th>
                       <th>Description</th>
-                      <th colspan="5">Action</th>
+                      <th colspan="5">Ajouter Variable</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -66,13 +72,13 @@
                       <td>{{ m.id }}</td>
                       <td>{{ m.name }}</td>
                       <td>{{ m.description }}</td>
-                      <td style="text-align: center; vertical-align: middle;"><button class="button edit-button" (click)="updateModele(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/rotation.png" alt="update"></button></td>
-                      <td style="text-align: center; vertical-align: middle;"><button class="button delete-button" (click)="deleteModele(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/delete.png" alt="Delete"></button></td>
-                      <!--<td style="text-align: center; vertical-align: middle;"><button class="button delete-button" (click)="listeVariableModele(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/bouton-ajouter.png" alt="ajouter"></button></td>-->
+                      <!-- <td style="text-align: center; vertical-align: middle;"><button class="button edit-button" (click)="updateModele(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/rotation.png" alt="update"></button></td> -->
+                      <!--<td style="text-align: center; vertical-align: middle;"><button class="button delete-button" (click)="deleteModele(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/delete.png" alt="Delete"></button></td>-->
+                      <td style="text-align: center; vertical-align: middle;"><button class="button delete-button" (click)="listeVariableModele(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/bouton-ajout.png" alt="ajouter"></button></td>
                       <!--<td style="text-align: center; vertical-align: middle;"><button class="button delete-button" (click)="addVariable(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/plus.png" alt="Delete"></button></td>-->
                       <!--<td style="text-align: center; vertical-align: middle;"><button class="button delete-button" (click)="addVariable(m.id)"><img style="height: 23px;width: 23px;" src="../assets/images/see.png" alt="Delete"></button></td>-->
 
-                      <td style="text-align: center; vertical-align: middle;">
+                     <!-- <td style="text-align: center; vertical-align: middle;">
 
                         <div class="form-check form-switch">
                           <input class="form-check-input" type="checkbox" role="switch"
@@ -82,7 +88,7 @@
                           <label class="form-check-label" [for]="'flexSwitchCheck' + m.id">
                           </label>
                         </div>
-                      </td>
+                      </td>-->
                     </tr>
                   </tbody>
                 </table>
@@ -151,3 +157,4 @@
   </div>
   </body>
 </html>
+

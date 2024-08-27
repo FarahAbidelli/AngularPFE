@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Noter Client</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Matricule</th>
+          <th>Code Relation</th>
+          <th>Nom</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{ client.id }}</td>
+          <td>{{ client.codeRelation }}</td>
+          <td>{{ client.nom }}</td>
+          <td>
+            <!--<button class="btn btn-primary" (click)="onNoterClient(client)">Noter</button>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

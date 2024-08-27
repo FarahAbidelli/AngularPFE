@@ -58,6 +58,18 @@ import { UploadSituationlCsvComponent } from './ClientProfesFolder/Situation/upl
 import { UploadCsvClientComponent } from './ClientProfesFolder/upload-csv-client/upload-csv-client.component';
 import { DetailslClientComponent } from './ClientProfesFolder/detailsl-client/detailsl-client.component';
 import { UploadlCsvComponent } from './ClientProfesFolder/uploadl-csv/uploadl-csv.component';
+import { AddVariableComponent } from './Modeles/Variable/add-variable/add-variable.component';
+import { ListVariableComponent } from './Modeles/Variable/list-variable/list-variable.component';
+import { ConsulterScoresVariableComponent } from './Modeles/Variable/consulter-scores-variable/consulter-scores-variable.component';
+import { VariablesModeleComponent } from './Modeles/Variable/variables-modele/variables-modele.component';
+import { AddScoreComponent } from './Modeles/Score/add-score/add-score.component';
+import { AjoutVariableComponent } from './Modeles/Variable/ajout-variable/ajout-variable.component';
+import { NoterClientComponent } from './ClientProfesFolder/Notation/noter-client/noter-client.component';
+import { NoterClientFormComponent } from './ClientProfesFolder/Notation/noter-client-form/noter-client-form.component';
+import { ConsulterNotationComponent } from './ClientProfesFolder/Notation/consulter-notation/consulter-notation.component';
+import { ModifierNotationComponent } from './ClientProfesFolder/Notation/modifier-notation/modifier-notation.component';
+import { UpdateNotationComponent } from './ClientProfesFolder/Notation/update-notation/update-notation.component';
+
 
 @NgModule({
   declarations: [
@@ -107,7 +119,20 @@ import { UploadlCsvComponent } from './ClientProfesFolder/uploadl-csv/uploadl-cs
     UploadSituationlCsvComponent,
     UploadCsvClientComponent,
     DetailslClientComponent,
-    UploadlCsvComponent
+    UploadlCsvComponent,
+    AddVariableComponent,
+    ListVariableComponent,
+    ConsulterScoresVariableComponent,
+    VariablesModeleComponent,
+    AddScoreComponent,
+    AjoutVariableComponent,
+    ConsulterNotationComponent,
+    ModifierNotationComponent,
+    NoterClientComponent,
+
+    NoterClientFormComponent,
+      UpdateNotationComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -33,6 +33,23 @@
                         </li>
                     </ul>
                 </li>
+                <li class="sidebar-item" style="background-color: #0F265B;">
+                  <a class="sidebar-link has-arrow waves-effect waves-dark" data-bs-toggle="collapse" href="#notationClientSubMenu" role="button" aria-expanded="false" aria-controls="notationClientSubMenu" style="text-decoration: none;font-family: serif;">
+                    <span class="hide-menu"><img style="height: 23px;width: 23px;margin-bottom: 12px;" src="../assets/images/payment.png" alt="Icon">Notation Client</span>
+                  </a>
+                  <ul class="sidebar-submenu collapse" id="notationClientSubMenu">
+                    <li class="sidebar-item" style="background-color: #0F265B;">
+                      <a [routerLink]="['/admin/ClientProfesFolder/Notation/noter-client-form']" class="sidebar-link" style="text-decoration: none;font-family: serif;">
+                        <img style="height: 23px;width: 23px" src="../assets/images/remplirNotation.png" alt="Icon">Noter Client
+                      </a>
+                     <a [routerLink]="['/admin/ClientProfesFolder/Notation/modifier-notation']" class="sidebar-link" style="text-decoration: none;font-family: serif;">
+                        <img style="height: 23px;width: 23px" src="../assets/images/changeNotes.png" alt="Icon">Modifier Notation
+                      </a>
+                      <a [routerLink]="['/admin/ClientProfesFolder/Notation/consulter-notation']" class="sidebar-link" style="text-decoration: none;font-family: serif;">
+                        <img style="height: 23px;width: 23px" src="../assets/images/ConsulterNotation.png" alt="Icon">Consulter Notation
+                      </a>
+                    </li>
+                  </ul>
             </ul>
         </nav>
     </div>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Consulter Notation</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .notation-card {
+        background-color: #ffffff;
+        border: 1px solid #e3e6f0;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .notation-card h3 {
+        margin-top: 0;
+        color: #007bff;
+        font-size: 20px;
+      }
+
+      .notation-card p {
+        margin: 10px 0;
+        color: #666;
+      }
+
+      .responses-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 15px 0 0;
+      }
+
+      .responses-list li {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px 0;
+        background-color: #e9ecef;
+      }
+    </style>
+  </head>
+  <body>
+    <app-menu-client-profes></app-menu-client-profes>
+    <div class="container">
+      <h2>Consulter Notation</h2>
+      <div *ngFor="let notation of notationsFinalisees" class="notation-card">
+        <h3>Notation #{{ notation.id }}</h3>
+        <p>Note: <strong>{{ notation.note }}</strong></p>
+        <h4>Réponses:</h4>
+        <ul class="responses-list">
+          <li *ngFor="let response of notation.responses">
+            <strong>{{ response.description }}:</strong> {{ response.response }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <app-footer></app-footer>
+    </div>
+  </body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+    <!-- Tell the browser to be responsive to screen width -->
+
+
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  -->
+
+    <!-- Favicon icon -->
+
+
+  <!--
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon.png"
+    />
+
+  </head>
+  <style>
+    .input-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+  }
+
+  .input {
+      display: flex;
+      align-items: center;
+      width: 60%;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 10px 20px;
+  }
+
+  .input-item {
+      flex: 1;
+  }
+
+  .input-item input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 50px;
+  }
+
+  .input-item input::placeholder {
+      color: #999;
+  }
+
+  .btn1 {
+      background-color: #4285F4;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .btn1:hover {
+      background-color: #357ae8;
+  }
+
+  /* Style pour les messages */
+  .message-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  }
+
+  .message-box {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .message-box .fs-title {
+      font-size: 18px;
+      color: #333;
+      margin: 0;
+  }
+
+  .fs-title {
+      font-size: 18px;
+      color: #333;
+  }
+  </style>
+<body>
+  <app-menu-client-profes></app-menu-client-profes>
+  <br>
+
+
+<div class="container">
+  <h2>Consulter Notation</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let notation of notationsFinalisees">
+          <td>{{ notation.id }}</td>
+          <td>{{ notation.note }}</td>
+          <ul>
+            <li *ngFor="let response of notation.responses">
+              {{ response.description}}
+              {{response.response}}
+            </li>
+          </ul>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div  style="margin-bottom: 220px;"></div>
+    <div class="page-wrapper">
+      <app-footer></app-footer>
+  </div>
+  </body>
+
+  </html>-->

@@ -1,3 +1,5 @@
+import { Variable } from "./variable";
+
 export class Modele {
 id?: number;
 nom?:string;
@@ -13,6 +15,6 @@ minCaValue?: number;
 maxCaValue?: number;
 withFinancialData?: boolean;
 annee?:number;
-
+variables: Variable[] = [];;
 
 }

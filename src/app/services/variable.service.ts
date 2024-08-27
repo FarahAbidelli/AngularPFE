@@ -18,6 +18,31 @@ export class VariableService {
   public getAllVariables(){
     return this.http.get<Variable[]>(`${this.BasicUrl}/getAllVariables  `);
   }
+
+  public getAllVariableResponses(notationId:any){
+    return this.http.get<any[]>(`${this.BasicUrl}/variableResponses/${notationId}`);
+  }
+
+  public sendResponses(responses: any){
+    return this.http.post<any>(`${this.BasicUrl}/note`,responses);
+  }
+
+  public saveResponses(responses: any){
+    return this.http.post<any>(`${this.BasicUrl}/notation`,responses);
+  }
+
+  public updateResponses(responses: any){
+    return this.http.put<any>(`${this.BasicUrl}/notation`,responses);
+  }
+
+  public getTerminated(){
+    return this.http.get<any>(`${this.BasicUrl}/done`);
+  }
+
+  public getInProgress(){
+    return this.http.get<any>(`${this.BasicUrl}/inProgress`);
+  }
+
   public getVariableById(id: number): Observable<any> {
 
     const url = `${this.BasicUrl}/getVariableScoreById/${id}`;

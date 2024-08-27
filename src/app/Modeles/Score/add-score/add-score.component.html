@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+  <html dir="ltr" lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="your keywords here" />
+    <meta name="description" content="your description here" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Ajouter Score</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+    <style>
+      body {
+        overflow-y: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <app-menu-modele></app-menu-modele>
+    <br /><br /><br />
+    <div class="row justify-content-center" style="font-size: 16px; font-family: serif; margin-left: 230px;">
+      <div class="col-md-6">
+        <div class="card">
+          <form class="form-horizontal" (ngSubmit)="createScore()">
+            <div class="card-body">
+              <h4 class="card-title" style="font-family: serif; font-size: 20px;">Ajouter Score</h4>
+
+              <div class="form-group row">
+                <label for="score" class="col-sm-3 text-end control-label col-form-label">Score</label>
+                <div class="col-sm-9">
+                  <input type="number" [(ngModel)]="score.score" required name="score" class="form-control" placeholder="Score" id="score">
+                </div>
+              </div>
+
+              <div class="form-group row" *ngIf="isType(Type.ENUMERATION)">
+                <label for="enumeration" class="col-sm-3 text-end control-label col-form-label">Valeur</label>
+                <div class="col-sm-9">
+                  <input type="text" [(ngModel)]="score.enumeration" required name="enumeration" class="form-control" placeholder="Valeur" id="enumeration">
+                </div>
+              </div>
+
+              <div class="form-group row" *ngIf="isType(Type.DATE)">
+                <label for="date" class="col-sm-3 text-end control-label col-form-label">Date</label>
+                <div class="col-sm-9">
+                  <input type="date" [(ngModel)]="score.date" required name="date" class="form-control" placeholder="Date" id="date">
+                </div>
+              </div>
+
+              <div class="form-group row" *ngIf="isType(Type.NUMBER)">
+                <label for="number" class="col-sm-3 text-end control-label col-form-label">Nombre</label>
+                <div class="col-sm-9">
+                  <input type="number" [(ngModel)]="score.num" required name="num" class="form-control" placeholder="Nombre" id="number">
+                </div>
+              </div>
+
+              <div class="form-group row" *ngIf="isType(Type.INTERVALE)">
+                <label for="vmin" class="col-sm-3 text-end control-label col-form-label">Valeur Min</label>
+                <div class="col-sm-9">
+                  <input type="number" [(ngModel)]="score.vmin" required name="vmin" class="form-control" placeholder="Valeur Min" id="vmin">
+
+               <br> </div>
+                <label for="vmax" class="col-sm-3 text-end control-label col-form-label">Valeur Max</label>
+                <div class="col-sm-9">
+                  <input type="number" [(ngModel)]="score.vmax" required name="vmax" class="form-control" placeholder="Valeur Max" id="vmax">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="card-body" style="display: flex; justify-content: center;">
+                <button type="submit" class="btn btn-success">Enregistrer Score</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div style="margin-bottom: 290px;"></div>
+    <div class="page-wrapper">
+      <app-footer></app-footer>
+    </div>
+  </body>
+
+  </html>
+

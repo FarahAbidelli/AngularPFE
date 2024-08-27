@@ -5,12 +5,13 @@ import { Modele } from 'src/app/models/modele';
 import { ModeleService } from 'src/app/services/modele.service';
 import Swal from 'sweetalert2';
 
+
 @Component({
-  selector: 'app-list-modele',
-  templateUrl: './list-modele.component.html',
-  styleUrls: ['./list-modele.component.css'],
+  selector: 'app-ajout-variable',
+  templateUrl: './ajout-variable.component.html',
+  styleUrls: ['./ajout-variable.component.css']
 })
-export class ListModeleComponent implements OnInit {
+export class AjoutVariableComponent {
   modele: Modele[] = [];
   name: string = '';
   id?:number;

@@ -32,4 +32,20 @@ export class ClientProfesService {
  SearchByCodeRelation(codeRelation:any){
   return this.http.get<ClientProfes[]>(`${this.BasicUrl}/findByCodeRelation?codeRelation=${codeRelation}`);
  }
+
+
+  // Enregistrer une notation
+  saveNotation(clientId: number, score: number, status: string): Observable<any> {
+    return this.http.post(`${this.BasicUrl}/notations`, { clientId, score, status });
+  }
+
+  // Récupérer les notations en cours
+  getNotationsEnCours(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.BasicUrl}/notations?status=en cours`);
+  }
+
+  // Récupérer les notations finalisées
+  getNotationsFinalisees(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.BasicUrl}/notations?status=finalise`);
+  }
 }

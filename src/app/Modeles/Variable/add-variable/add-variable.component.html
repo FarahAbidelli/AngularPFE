@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="your keywords here" />
+  <meta name="description" content="your description here" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <app-menu-modele></app-menu-modele>
+  <br /><br /><br />
+  <div class="row justify-content-center" style="font-size: 16px; font-family: serif; margin-left: 230px;">
+    <div class="col-md-6">
+      <div class="card">
+        <form class="form-horizontal">
+          <div class="card-body">
+            <h4 class="card-title" style="font-family: serif; font-size: 20px;">Ajouter Variable</h4>
+            <div class="form-group row">
+              <label for="fname" class="col-sm-3 text-end control-label col-form-label">Code</label>
+              <div class="col-sm-9">
+                <input type="text" [(ngModel)]="variable.code" required [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Code variable" id="nom">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lname" class="col-sm-3 text-end control-label col-form-label">Description</label>
+              <div class="col-sm-9">
+                <input type="text" required [(ngModel)]="variable.description" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Description variable" id="description">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lname" class="col-sm-3 text-end control-label col-form-label">Coefficient</label>
+              <div class="col-sm-9">
+                <input type="number" required [(ngModel)]="variable.coefficient" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Coefficient variable" id="description">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lname" class="col-sm-3 text-end control-label col-form-label">Type</label>
+              <div class="col-sm-9">
+                <select [(ngModel)]="variable.type" required [ngModelOptions]="{standalone: true}" class="form-control">
+                  <option value="ENUMERATION">ENUMERATION</option>
+                  <option value="NUMBER">NUMBER</option>
+                  <option value="DATE">DATE</option>
+                  <option value="INTERVALE">INTERVALE</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card-body" style="display: flex; justify-content: center;">
+              <button type="submit" (click)="create()" class="btn btn-success">Suivant</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><br>
+  <div style="margin-bottom: 290px;"></div>
+  <div class="page-wrapper">
+    <app-footer></app-footer>
+  </div>
+</body>
+
+</html>
