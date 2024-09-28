@@ -23,12 +23,12 @@ export class VariableService {
     return this.http.get<any[]>(`${this.BasicUrl}/variableResponses/${notationId}`);
   }
 
-  public sendResponses(responses: any){
-    return this.http.post<any>(`${this.BasicUrl}/note`,responses);
+  public sendResponses(responses: any,id:any){
+    return this.http.post<any>(`${this.BasicUrl}/note/${id}`,responses);
   }
 
-  public saveResponses(responses: any){
-    return this.http.post<any>(`${this.BasicUrl}/notation`,responses);
+  public saveResponses(responses: any,id:any){
+    return this.http.post<any>(`${this.BasicUrl}/notation/${id}`,responses);
   }
 
   public updateResponses(responses: any){

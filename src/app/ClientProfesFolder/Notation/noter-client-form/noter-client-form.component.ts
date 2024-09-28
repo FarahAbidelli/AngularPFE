@@ -19,11 +19,16 @@ export class NoterClientFormComponent implements OnInit{
   searchtext:any;
   Type = Type;
   responses : Response[] = [];
+  clientId: number | undefined;
+
 
   constructor(private route: ActivatedRoute, private service: VariableService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadVariable();
+    this.route.params.subscribe(params => {
+    this.clientId = +params['id'];
+    });
   }
 
   loadVariable():void{
@@ -44,7 +49,7 @@ export class NoterClientFormComponent implements OnInit{
     console.log(this.responses);
     return this.responses.find(response => response.variableId === variableId);
   }
-  /*submitResponse(): void {           shyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyha
+  /*submitResponse(): void {
     const response = { responses: this.responses, status: "DONE" };
     this.service.sendResponses(response).subscribe({
       next: (data) => {
@@ -65,7 +70,7 @@ export class NoterClientFormComponent implements OnInit{
   }*/
 
 
-    submitResponse(): void {
+    /*submitResponse(): void {
       // Vérifie si toutes les réponses sont remplies
       const incompleteResponses = this.responses.some(response => !response.response);
 
@@ -95,40 +100,38 @@ export class NoterClientFormComponent implements OnInit{
           console.error('Une erreur s\'est produite lors de la soumission de la réponse :', error);
         }
       });
-    }
+    }*/
 
-  /*submitResponse() : any {
+  submitResponse() : any {
     const response = {responses : this.responses, status : "DONE"}
-    return this.service.sendResponses(response).subscribe({
+    return this.service.sendResponses(response,this.clientId).subscribe({
       next: (data)=>{
 
       Swal.fire(
-        "note",
-        "est :           "+ data.note
+        "VOTRE NOTE EST :           "+ data.note
       );
 
     },
      error: (Error)=>{
       console.log(Error);
      }
-  })}*/
+  })}
 
-/*  submitResponseSave() : any {
+  submitResponseSave() : any {
     const response = {responses : this.responses, status : "IN_PROGRESS"}
-    return this.service.saveResponses(response).subscribe({
+    return this.service.saveResponses(response,this.clientId).subscribe({
       next: (data)=>{
 
       Swal.fire(
-        "note",
-        "est :           "+ data.note
+        "Votre réponse a été enregistrée."
       );
 
     },
      error: (Error)=>{
       console.log(Error);
      }
-  })}*/
-  submitResponseSave(): void {
+  })}
+  /*submitResponseSave(): void {
     const response = { responses: this.responses, status: "IN_PROGRESS" };
     this.service.saveResponses(response).subscribe({
       next: (data) => {
@@ -145,5 +148,5 @@ export class NoterClientFormComponent implements OnInit{
         console.error('Une erreur s\'est produite lors de l\'enregistrement des réponses :', error);
       }
     });
-  }
+  }*/
 }

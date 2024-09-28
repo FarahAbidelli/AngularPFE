@@ -23,8 +23,8 @@ export class NotationService {
   }
 
   // Créer une nouvelle notation
-  createNotation(notation: Notation): Observable<Notation> {
-    return this.http.post<Notation>(this.apiUrl, notation);
+  createNotation(notation: Notation,id : number): Observable<Notation> {
+    return this.http.post<Notation>(`${this.apiUrl}/${id}`, notation);
   }
 
   // Mettre à jour une notation

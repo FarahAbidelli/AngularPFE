@@ -49,6 +49,7 @@ import { NoterClientFormComponent } from './ClientProfesFolder/Notation/noter-cl
 import { ConsulterNotationComponent } from './ClientProfesFolder/Notation/consulter-notation/consulter-notation.component';
 import { ModifierNotationComponent } from './ClientProfesFolder/Notation/modifier-notation/modifier-notation.component';
 import { UpdateNotationComponent } from './ClientProfesFolder/Notation/update-notation/update-notation.component';
+import { ListClientNotationComponent } from './ClientProfesFolder/Notation/list-client-notation/list-client-notation.component';
 
 const routes: Routes = [
   {
@@ -106,11 +107,11 @@ const routes: Routes = [
       { path: 'Variable/ajout-variable', component: AjoutVariableComponent},
       { path: 'ClientProfesFolder/Notation/noter-client', component: NoterClientComponent },
       { path: 'ClientProfesFolder/Notation/noter-client', component: NoterClientComponent },
-      { path: 'ClientProfesFolder/Notation/noter-client-form', component: NoterClientFormComponent },
+      { path: 'ClientProfesFolder/Notation/noter-client-form/:id', component: NoterClientFormComponent },
       { path: 'ClientProfesFolder/Notation/consulter-notation', component: ConsulterNotationComponent },
       { path: 'ClientProfesFolder/Notation/modifier-notation', component: ModifierNotationComponent },
-      { path: 'updateNotation/:id',component: UpdateNotationComponent}
-
+      { path: 'updateNotation/:id',component: UpdateNotationComponent},
+      { path: 'ClientProfesFolder/Notation/list-client-notation',component:ListClientNotationComponent }
     ]
   },
   { path: 'login', component: LoginComponent },
