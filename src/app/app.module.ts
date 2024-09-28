@@ -69,6 +69,7 @@ import { NoterClientFormComponent } from './ClientProfesFolder/Notation/noter-cl
 import { ConsulterNotationComponent } from './ClientProfesFolder/Notation/consulter-notation/consulter-notation.component';
 import { ModifierNotationComponent } from './ClientProfesFolder/Notation/modifier-notation/modifier-notation.component';
 import { UpdateNotationComponent } from './ClientProfesFolder/Notation/update-notation/update-notation.component';
+import { ListClientNotationComponent } from './ClientProfesFolder/Notation/list-client-notation/list-client-notation.component';
 
 
 @NgModule({
@@ -132,6 +133,7 @@ import { UpdateNotationComponent } from './ClientProfesFolder/Notation/update-no
 
     NoterClientFormComponent,
       UpdateNotationComponent,
+      ListClientNotationComponent,
 
   ],
   imports: [
