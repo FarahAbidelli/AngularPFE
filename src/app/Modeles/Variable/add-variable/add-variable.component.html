@@ -57,6 +57,28 @@
                 </select>
               </div>
             </div>
+            <div class="form-group row">
+              <label for="lname" class="col-sm-3 text-end control-label col-form-label">Response Meaning</label>
+              <div class="col-sm-9">
+                <select [(ngModel)]="variable.responseMeaning" required [ngModelOptions]="{standalone: true}" class="form-control">
+                  <option value="PROFESSION">PROFESSION</option>
+                  <option value="DATENAISSANCE">DATENAISSANCE</option>
+                  <option value="SECTEURACTIVITE">SECTEURACTIVITE</option>
+                  <option value="CHIFFREAFFAIRE">CHIFFREAFFAIRE</option>
+                  <option value="DENOMINATIONSOCIALE">DENOMINATIONSOCIALE</option>
+                  <option value="MntEnConsolidation">MntEnConsolidation</option>
+                  <option value="IMPAYE">IMPAYE</option>
+                  <option value="SOLDEMOYENANNUELANNEEN">SOLDEMOYENANNUELANNEEN</option>
+                  <option value="MONTANTIMPAYES">MONTANTIMPAYES</option>
+                  <option value="REGULARITEECHEANCES">REGULARITEECHEANCES</option>
+                  <option value="RATIOENGAGEMENTCDR">RATIOENGAGEMENTCDR</option>
+                  <option value="SOLDEMOYENANNUEANNEEN1">SOLDEMOYENANNUEANNEEN1</option>
+                  <option value="CLASSERISQUELEGACY">CLASSERISQUELEGACY</option>
+                  <option value="IDENTIFIANTNATIONAL">IDENTIFIANTNATIONAL</option>
+                </select>
+              </div>
+            </div>
+
           </div>
           <div>
             <div class="card-body" style="display: flex; justify-content: center;">

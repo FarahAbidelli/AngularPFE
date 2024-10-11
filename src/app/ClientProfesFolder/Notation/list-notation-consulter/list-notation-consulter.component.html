@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Consulter Notation</title>
+    <title>Modifier Notation</title>
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" />
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -15,82 +16,118 @@
       }
 
       .container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 50px auto;
         padding: 20px;
-        background: #ffffff;
+      }
+
+      .card {
+        border: none;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
-      h2 {
-        text-align: center;
-        margin-bottom: 30px;
+      .card-header {
+        background-color: #e9ecef;
         color: #333;
-      }
-
-      .notation-card {
-        background-color: #ffffff;
-        border: 1px solid #e3e6f0;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .notation-card h3 {
-        margin-top: 0;
-        color: #007bff;
         font-size: 20px;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
       }
 
-      .notation-card p {
-        margin: 10px 0;
-        color: #666;
+      .card-body {
+        padding: 20px;
+        background-color: #ffffff;
       }
 
-      .responses-list {
-        list-style-type: none;
-        padding-left: 0;
-        margin: 15px 0 0;
+      .table {
+        border-radius: 10px;
+        overflow: hidden;
       }
 
-      .responses-list li {
-        background-color: #f8f9fa;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 10px;
+      .table thead th {
+        background-color: #e9ecef;
         color: #333;
+        text-align: center;
+      }
+
+      .table tbody tr {
+        transition: background-color 0.3s ease;
+      }
+
+      .table tbody tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      .table td {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .btn img {
+        height: 23px;
+        width: 23px;
+        transition: transform 0.3s ease;
+      }
+
+      .btn:hover img {
+        transform: scale(1.1);
       }
 
       .footer {
         text-align: center;
-        margin-top: 50px;
-        padding: 20px 0;
+        margin-top: 30px;
+        padding: 20px;
         background-color: #e9ecef;
+        color: #333;
+        border-radius: 10px;
       }
     </style>
   </head>
   <body>
     <app-menu-client-profes></app-menu-client-profes>
+    <br>
+
     <div class="container">
-      <h2>Consulter Notation</h2>
-      <div *ngFor="let notation of notationsFinaliseesById" class="notation-card">
+      <div class="card">
+        <div class="card-header">Consulter les notations</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>ID Notation</th>
+                  <th>Note</th>
+                  <th>Détails</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let notation of notations">
+                  <td>{{ notation.id }}</td>
+                  <td>{{ notation.note }}</td>
+                  <td>
+                    <button class="btn btn-outline-primary btn-sm" [routerLink]="['/admin/ClientProfesFolder/Notation/consulter-notation', notation.id]">
+                      <img src="../assets/images/see.png" alt="update" />
+                    </button>
 
-        <!-- <h4>Réponses:</h4> -->
-
-            <strong>{{ notation.description }}:</strong> {{ notation.response }}
-
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div style="margin-bottom: 220px;"></div>
     <div class="footer">
       <app-footer></app-footer>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
 
 
 <!-- <!DOCTYPE html>
@@ -102,8 +139,8 @@
 
     <!-- Tell the browser to be responsive to screen width -->
 
-
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="keywords"
       content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
@@ -114,13 +151,8 @@
     />
     <meta name="robots" content="noindex,nofollow" />
     <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
-  -->
-
     <!-- Favicon icon -->
-
-
-  <!--
-    <link
+    <!-- <link
       rel="icon"
       type="image/png"
       sizes="16x16"
@@ -214,8 +246,9 @@
   <br>
 
 
+
 <div class="container">
-  <h2>Consulter Notation</h2>
+  <h2>Modifier Notation</h2>
   <div class="table-responsive">
     <table class="table table-striped">
       <thead>
@@ -225,16 +258,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let notation of notationsFinalisees">
+        <tr *ngFor="let notation of notations">
           <td>{{ notation.id }}</td>
           <td>{{ notation.note }}</td>
-          <ul>
-            <li *ngFor="let response of notation.responses">
-              {{ response.description}}
-              {{response.response}}
-            </li>
-          </ul>
+          <td style="text-align: center; vertical-align: middle;"><button class="btn  btn-sm" [routerLink]="['/admin/updateNotation', notation.id]"><img style="height: 23px;width: 23px;" src="../assets/images/see.png" alt="update"></button></td>
         </tr>
+
       </tbody>
     </table>
   </div>
@@ -243,7 +272,12 @@
 <div  style="margin-bottom: 220px;"></div>
     <div class="page-wrapper">
       <app-footer></app-footer>
-  </div>
+  </div>-->
+   <!-- Bootstrap JS -->
+
+   <!--
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   </body>
 
-  </html>-->
+  </html>
+-->

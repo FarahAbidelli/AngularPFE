@@ -10,7 +10,7 @@
 
                     </a>
                 </li>
-                <li class="sidebar-item" style="background-color: #0F265B;">
+                <li class="sidebar-item" [hidden]="accessAdmin"  style="background-color: #0F265B;">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#relationClientSubMenu" role="button" aria-expanded="false" aria-controls="relationClientSubMenu">
                         <span class="hide-menu"><img style="height: 27px;width: 23px;margin-bottom: 12px;" src="../assets/images/clientF.png" alt="Icon">Relation Client</span>
                     </a>
@@ -21,7 +21,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item" style="background-color: #0F265B;">
+                <li class="sidebar-item" [hidden]="accessAdmin" style="background-color: #0F265B;">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#situationClientSubMenu" role="button" aria-expanded="false" aria-controls="situationClientSubMenu">
 
                         <span class="hide-menu"><img style="height: 23px;width: 23px;margin-bottom: 12px;" src="../assets/images/verified.png" alt="Icon">Situation Client</span>
@@ -33,7 +33,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item" style="background-color: #0F265B;">
+                <li class="sidebar-item" [hidden]="accessAdmin" style="background-color: #0F265B;" >
                   <a class="sidebar-link has-arrow waves-effect waves-dark" data-bs-toggle="collapse" href="#notationClientSubMenu" role="button" aria-expanded="false" aria-controls="notationClientSubMenu" style="text-decoration: none;font-family: serif;">
                     <span class="hide-menu"><img style="height: 23px;width: 23px;margin-bottom: 12px;" src="../assets/images/payment.png" alt="Icon">Notation Client</span>
                   </a>
@@ -45,11 +45,12 @@
                      <a [routerLink]="['/admin/ClientProfesFolder/Notation/modifier-notation']" class="sidebar-link" style="text-decoration: none;font-family: serif;">
                         <img style="height: 23px;width: 23px" src="../assets/images/changeNotes.png" alt="Icon">Modifier Notation
                       </a>
-                      <a [routerLink]="['/admin/ClientProfesFolder/Notation/consulter-notation']" class="sidebar-link" style="text-decoration: none;font-family: serif;">
+                      <a [routerLink]="['/admin/ClientProfesFolder/Notation/list-notation-consulter']" class="sidebar-link" style="text-decoration: none;font-family: serif;">
                         <img style="height: 23px;width: 23px" src="../assets/images/ConsulterNotation.png" alt="Icon">Consulter Notation
                       </a>
                     </li>
                   </ul>
+                  </li>
             </ul>
         </nav>
     </div>

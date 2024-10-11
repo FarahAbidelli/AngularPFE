@@ -70,6 +70,7 @@ import { ConsulterNotationComponent } from './ClientProfesFolder/Notation/consul
 import { ModifierNotationComponent } from './ClientProfesFolder/Notation/modifier-notation/modifier-notation.component';
 import { UpdateNotationComponent } from './ClientProfesFolder/Notation/update-notation/update-notation.component';
 import { ListClientNotationComponent } from './ClientProfesFolder/Notation/list-client-notation/list-client-notation.component';
+import { ListNotationConsulterComponent } from './ClientProfesFolder/Notation/list-notation-consulter/list-notation-consulter.component';
 
 
 @NgModule({
@@ -134,6 +135,7 @@ import { ListClientNotationComponent } from './ClientProfesFolder/Notation/list-
     NoterClientFormComponent,
       UpdateNotationComponent,
       ListClientNotationComponent,
+      ListNotationConsulterComponent,
 
   ],
   imports: [

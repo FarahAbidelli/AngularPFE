@@ -25,7 +25,7 @@ export class RolesComponent implements OnInit{
       next: (data) =>{
         this.roles= data ;
         this.totalUsers=data.length;
-      
+
       },
       error : (Error) =>{
         console.log(Error);
@@ -36,7 +36,7 @@ export class RolesComponent implements OnInit{
       this.router.navigate(['/update-role',id]);
     }
     deleteRole(id: any): void {
- 
+
       Swal.fire({
         title: 'Êtes-vous sûr?',
         text: "Vous êtes sur le point de supprimer cet module !",
@@ -49,14 +49,14 @@ export class RolesComponent implements OnInit{
       }).then((result) => {
         if (result.isConfirmed) {
           this.service.deleteRole(id).subscribe({
-            
+
             next: (res) => {
               Swal.fire(
                 'Supprimé!',
-                'Menu a été supprimé.',
+                'Role a été supprimé.',
                 'success'
               );
-              this.loadRole(); 
+              this.loadRole();
             },
             error: (error) => {
               console.error('Erreur lors de la suppression de role :', error);
@@ -76,5 +76,5 @@ export class RolesComponent implements OnInit{
         }
       });
     }
-    
+
 }

@@ -48,7 +48,7 @@
                       </a>
                   </li>
                   <li class="sidebar-item">
-                      <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#relationClientSubMenu" role="button" aria-expanded="false" aria-controls="relationClientSubMenu">
+                      <a class="sidebar-link has-arrow waves-effect waves-dark"  style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#relationClientSubMenu" role="button" aria-expanded="false" aria-controls="relationClientSubMenu" [hidden]="accessManager">
                         <img style="height: 23px;width: 23px;" src="../assets/images/permission icon.png" alt="Icon"><span class="hide-menu" >Gérer Premission</span>
                       </a>
                       <ul class="sidebar-submenu collapse" id="relationClientSubMenu">
@@ -59,7 +59,7 @@
                       </ul>
                   </li>
                   <li class="sidebar-item">
-                      <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#privelegeSubMenu" role="button" aria-expanded="false" aria-controls="privelegeSubMenu">
+                      <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#privelegeSubMenu" role="button" aria-expanded="false" aria-controls="privelegeSubMenu" [hidden]="accessManager">
                         <img style="height: 23px;width: 23px;" src="../assets/images/gerer privilege.png" alt="Icon">
                         <span class="hide-menu">Gérer Priviléges</span>
                       </a>
@@ -72,7 +72,29 @@
                       </ul>
                   </li>
                   <li class="sidebar-item">
-                      <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#rolesSubMenu" role="button" aria-expanded="false" aria-controls="rolesSubMenu">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#modeleSubMenu" role="button" aria-expanded="false" aria-controls="privelegeSubMenu" [hidden]="accessManager">
+                      <img style="height: 23px;width: 23px;" src="../assets/images/gererModule.png" alt="Icon">                          <span class="hide-menu">Gérer Modules</span>
+                    </a>
+                    <ul class="sidebar-submenu collapse" id="modeleSubMenu">
+                        <li class="sidebar-item" style="background-color: #0F265B;">
+                            <a [routerLink]="['/admin/add-module']" class="sidebar-link" style="text-decoration: none;font-family: serif;"><img style="height: 23px;width: 23px;" src="../assets/images/add.png" alt="Icon">Ajouter Module</a>
+                            <a [routerLink]="['/admin/list-modules']" class="sidebar-link" style="text-decoration: none;font-family: serif;"><img style="height: 23px;width: 23px;" src="../assets/images/verified.png" alt="Icon">Liste des modules</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#menuSubMenu" role="button" aria-expanded="false" aria-controls="privelegeSubMenu" [hidden]="accessManager">
+                    <img style="height: 23px;width: 23px;" src="../assets/images/gererMenu.png" alt="Icon">                          <span class="hide-menu">Gérer Menus</span>
+                  </a>
+                  <ul class="sidebar-submenu collapse" id="menuSubMenu">
+                      <li class="sidebar-item" style="background-color: #0F265B;">
+                          <a [routerLink]="['/admin/add-menu']" class="sidebar-link" style="text-decoration: none;font-family: serif;"><img style="height: 23px;width: 23px;" src="../assets/images/add.png" alt="Icon">Ajouter Menu</a>
+                          <a [routerLink]="['/admin/list-menu']" class="sidebar-link" style="text-decoration: none;font-family: serif;"><img style="height: 23px;width: 23px;" src="../assets/images/verified.png" alt="Icon">Liste des menus</a>
+                      </li>
+                  </ul>
+              </li>
+                  <li class="sidebar-item">
+                      <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#rolesSubMenu" role="button" aria-expanded="false" aria-controls="rolesSubMenu" [hidden]="accessManager" >
                         <img style="height: 23px;width: 23px;" src="../assets/images/gerer roles.png" alt="Icon">
                           <span class="hide-menu">Gérer Rôles</span>
                       </a>
@@ -85,7 +107,7 @@
                       </ul>
                   </li>
                   <li class="sidebar-item">
-                      <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#utilisateursSubMenu" role="button" aria-expanded="false" aria-controls="utilisateursSubMenu">
+                      <a class="sidebar-link has-arrow waves-effect waves-dark" style="text-decoration: none;font-family: serif;" data-bs-toggle="collapse" href="#utilisateursSubMenu" role="button" aria-expanded="false" aria-controls="utilisateursSubMenu" [hidden]="accessManager">
                         <img style="height: 23px;width: 23px;" src="../assets/images/gerer user.png" alt="Icon">                          <span class="hide-menu">Gérer Utilisateurs</span>
                       </a>
                       <ul class="sidebar-submenu collapse" id="utilisateursSubMenu">

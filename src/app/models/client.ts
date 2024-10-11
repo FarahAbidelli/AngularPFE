@@ -1,7 +1,7 @@
 export class Client {
-    /*
-    mtaa ameni
-    */
+  /*
+  mtaa ameni
+  */
 id?:number;
 codeRelation?:number;
 idNat?:String;

@@ -56,7 +56,7 @@ export class UpdateNotationComponent implements OnInit{
 
       Swal.fire(
         "note",
-        "est :           "+ data.note
+        "est :"+ data.note
       );
 
     },

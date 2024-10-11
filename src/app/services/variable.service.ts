@@ -16,8 +16,13 @@ export class VariableService {
     return this.http.post<Variable>(`${this.BasicUrl}/addVariable/${modeleId}`,variable);
   }
   public getAllVariables(){
-    return this.http.get<Variable[]>(`${this.BasicUrl}/getAllVariables  `);
+    return this.http.get<Variable[]>(`${this.BasicUrl}/getAllVariables`);
   }
+
+  public getAllVariablesId(clientId: any){
+    return this.http.get<Variable[]>(`${this.BasicUrl}/getAllVariables/${clientId}`);
+  }
+
 
   public getAllVariableResponses(notationId:any){
     return this.http.get<any[]>(`${this.BasicUrl}/variableResponses/${notationId}`);
@@ -32,7 +37,7 @@ export class VariableService {
   }
 
   public updateResponses(responses: any){
-    return this.http.put<any>(`${this.BasicUrl}/notation`,responses);
+    return this.http.post<any>(`${this.BasicUrl}/note`,responses);
   }
 
   public getTerminated(){
@@ -65,5 +70,12 @@ valeurPonderer(variableId: number): Observable<Variable> {
   const url = `${this.BasicUrl}/ponderation/${variableId}`;
   return this.http.get<Variable>(url);
 }
+
+public getNotationById(id: number): Observable<any> {
+
+  const url = `${this.BasicUrl}/variableResponses/${id}`;
+  return this.http.get<any>(url);
+}
+
 
 }

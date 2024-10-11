@@ -6,9 +6,10 @@ import { Injectable } from '@angular/core';
 export class TokenstorageService {
   TOKEN_KEY = 'auth-token';
   USER_KEY = 'auth-user';
+  ROLES_KEY = 'auth-roles' ;
 
   constructor() { }
-  
+
   signOut(){
     window.sessionStorage.clear();
   }
@@ -28,5 +29,9 @@ export class TokenstorageService {
   }
   clean(): void {
     window.localStorage.clear();
+  }
+  public getRoles(): string[] {
+    const user = this.getUser();
+    return user && user.role ? user.role : [];
   }
 }

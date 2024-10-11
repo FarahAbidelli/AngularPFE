@@ -25,18 +25,18 @@ export class NoterClientFormComponent implements OnInit{
   constructor(private route: ActivatedRoute, private service: VariableService, private router: Router) {}
 
   ngOnInit(): void {
-    this.loadVariable();
     this.route.params.subscribe(params => {
-    this.clientId = +params['id'];
+      this.clientId = +params['id'];
+    this.loadVariable();
     });
   }
 
   loadVariable():void{
-    this.service.getAllVariables().subscribe({
+    this.service.getAllVariablesId(this.clientId).subscribe({
       next: (data)=>{
       this.variables=data;
       this.totalModules=data.length;
-      this.responses = this.variables.map(variable => new Response(variable.id, ''));
+      this.responses = this.variables.map(variable => new Response(variable.id, variable.response));
     },
      error: (Error)=>{
       console.log(Error);
@@ -108,7 +108,7 @@ export class NoterClientFormComponent implements OnInit{
       next: (data)=>{
 
       Swal.fire(
-        "VOTRE NOTE EST :           "+ data.note
+        "VOTRE NOTE EST :  "+ data.note
       );
 
     },
